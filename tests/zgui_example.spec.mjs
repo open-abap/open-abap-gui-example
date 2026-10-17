@@ -40,8 +40,10 @@ test.describe("ZGUI_EXAMPLE", () => {
     await page.getByLabel("City").fill("Copenhagen");
     await saveButton(page).click();
 
-    // DATE = USER follows the user's date format, so allow either separator.
-    await expect(statusMessage(page)).toHaveText(/^Saved Lars, Copenhagen, 15[./]01[./]1990, quantity 1$/);
+    // DATE = USER uses the server's locale; format it the same way as @abaplint/runtime.
+    const birthDate = new Intl.DateTimeFormat("default", {day: "2-digit", month: "2-digit", year: "numeric"})
+      .format(new Date("1990-01-15T00:00:00"));
+    await expect(statusMessage(page)).toHaveText(`Saved Lars, Copenhagen, ${birthDate}, quantity 1`);
     await expect(statusMessage(page)).toHaveClass(/wb-status-success/);
     // The values stay on screen after PAI.
     await expect(page.getByLabel("Name")).toHaveValue("Lars");
