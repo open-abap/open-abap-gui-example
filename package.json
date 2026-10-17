@@ -1,0 +1,13 @@
+{
+  "name": "open-abap-gui-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Simple dynpro example program in abapGit format",
+  "scripts": {
+    "test": "abaplint"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@abaplint/cli": "^2.120.80"
+  }
+}
