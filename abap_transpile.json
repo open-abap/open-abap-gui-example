@@ -1,0 +1,20 @@
+{
+  "input_folder": ["src", "generated"],
+  "exclude_filter": ["\\.prog\\."],
+  "output_folder": "output",
+  "incremental_output": true,
+  "converter": {
+    "input_folder": ["src"],
+    "output_folder": "generated"
+  },
+  "libs": [
+    { "url": "https://github.com/open-abap/open-abap-core" },
+    { "url": "https://github.com/open-abap/express-icf-shim" },
+    { "url": "https://github.com/open-abap/open-abap-bal" },
+    { "url": "https://github.com/open-abap/open-abap-gui", "files": ["/src/**", "/framework/**"] }
+  ],
+  "options": {
+    "addCommonJS": true,
+    "setup": { "filename": "../setup.mjs", "preFunction": "setupDatabase" }
+  }
+}

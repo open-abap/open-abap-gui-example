@@ -1,0 +1,86 @@
+{
+  "global": {
+    "files": "/src/**/*.*",
+    "exclude": ["\\.prog\\.screen_\\d+\\.abap$"],
+    "noIssues": []
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/open-abap/open-abap-core",
+      "files": "/src/**/*.*"
+    }
+  ],
+  "syntax": {
+    "version": "v750",
+    "errorNamespace": "^(Z|Y|LCL_|TY_|LIF_)"
+  },
+  "rules": {
+    "check_syntax": true,
+    "parser_error": true,
+    "unknown_types": true,
+    "check_no_handler_pragma": true,
+    "dynpro_checks": true,
+    "empty_statement": true,
+    "empty_structure": true,
+    "exit_or_check": true,
+    "functional_writing": true,
+    "identical_form_names": true,
+    "keyword_case": true,
+    "line_length": {
+      "length": 140
+    },
+    "line_only_punc": true,
+    "max_one_statement": true,
+    "obsolete_statement": true,
+    "preferred_compare_operator": true,
+    "sequential_blank": {
+      "lines": 3
+    },
+    "space_before_dot": true,
+    "unused_variables": true,
+    "use_new": true,
+    "whitespace_end": true,
+    "xml_consistency": true,
+    "cloud_types": true,
+    "contains_tab": true,
+    "indentation": true,
+    "local_variable_names": {
+      "expectedData": "^L._.+$",
+      "expectedConstant": "^LC_.+$",
+      "expectedFS": "^<L._.+>$"
+    },
+    "global_class": true,
+    "definitions_top": true,
+    "colon_missing_space": true,
+    "double_space": true,
+    "empty_line_in_statement": true,
+    "msag_consistency": true,
+    "start_at_tab": true,
+    "unreachable_code": true,
+    "unsecure_fae": true,
+    "exporting": true,
+    "allowed_object_types": {
+      "allowed": ["PROG", "DEVC", "TRAN"]
+    },
+    "allowed_object_naming": true,
+    "begin_end_names": true,
+    "check_comments": false,
+    "check_text_elements": true,
+    "check_transformation_exists": true,
+    "commented_code": true,
+    "description_empty": true,
+    "downport": false,
+    "form_no_dash": true,
+    "implement_methods": true,
+    "message_exists": true,
+    "nesting": {
+      "depth": 5
+    },
+    "prefer_inline": false,
+    "release_idoc": true,
+    "selection_screen_texts_missing": true,
+    "tabl_enhancement_category": true,
+    "type_form_parameters": true,
+    "when_others_last": true
+  }
+}
