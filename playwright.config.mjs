@@ -8,7 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: [
     ["list"],
-    ["html", {open: "never", outputFolder: "playwright-report"}],
+    ["html", {open: "never", outputFolder: "docs/playwright-report"}],
   ],
   use: {
     baseURL: "http://localhost:3000",

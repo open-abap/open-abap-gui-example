@@ -2,4 +2,3 @@ node_modules/
 generated/
 output/
 test-results/
-playwright-report/
