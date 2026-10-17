@@ -1,7 +1,7 @@
 {
   "global": {
     "files": "/src/**/*.*",
-    "exclude": [],
+    "exclude": ["\\.prog\\.screen_\\d+\\.abap$"],
     "noIssues": []
   },
   "dependencies": [
@@ -60,7 +60,7 @@
     "unsecure_fae": true,
     "exporting": true,
     "allowed_object_types": {
-      "allowed": ["PROG", "DEVC"]
+      "allowed": ["PROG", "DEVC", "TRAN"]
     },
     "allowed_object_naming": true,
     "begin_end_names": true,

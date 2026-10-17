@@ -11,7 +11,7 @@ DATA gv_quantity TYPE i.
 DATA gv_active TYPE abap_bool.
 
 START-OF-SELECTION.
-  gv_birth_date = sy-datum.
+  gv_birth_date = '19900115'.
   gv_quantity = 1.
   gv_active = abap_true.
   CALL SCREEN 100.

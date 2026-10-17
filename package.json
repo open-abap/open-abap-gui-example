@@ -4,10 +4,18 @@
   "version": "1.0.0",
   "description": "Simple dynpro example program in abapGit format",
   "scripts": {
-    "test": "abaplint"
+    "lint": "abaplint",
+    "convert": "open-abap-gui-convert",
+    "build": "npm run convert && abap_transpile abap_transpile.json",
+    "express": "npm run build && node express.mjs"
   },
   "license": "MIT",
   "devDependencies": {
-    "@abaplint/cli": "^2.120.80"
+    "@abaplint/cli": "^2.120.80",
+    "@abaplint/database-sqlite": "^2.13.83",
+    "@abaplint/open-abap-gui-converter": "^0.1.39",
+    "@abaplint/runtime": "^2.14.8",
+    "@abaplint/transpiler-cli": "^2.14.8",
+    "express": "^4.22.3"
   }
 }
