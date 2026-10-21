@@ -13,11 +13,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@abaplint/cli": "^2.120.80",
+    "@abaplint/cli": "^2.120.85",
     "@abaplint/database-sqlite": "^2.13.83",
     "@abaplint/open-abap-gui-converter": "^0.1.39",
-    "@abaplint/runtime": "^2.14.8",
-    "@abaplint/transpiler-cli": "^2.14.8",
+    "@abaplint/runtime": "^2.14.10",
+    "@abaplint/transpiler-cli": "^2.14.10",
     "@playwright/test": "^1.64.1",
     "express": "^4.22.3"
   }
