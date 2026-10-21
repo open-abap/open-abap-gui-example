@@ -6,12 +6,10 @@ REPORT zgui_example.
 DATA gv_ok_code TYPE sy-ucomm.
 DATA gv_name TYPE c LENGTH 30.
 DATA gv_city TYPE c LENGTH 25.
-DATA gv_birth_date TYPE d.
 DATA gv_quantity TYPE i.
 DATA gv_active TYPE abap_bool.
 
 START-OF-SELECTION.
-  gv_birth_date = '19900115'.
   gv_quantity = 1.
   gv_active = abap_true.
   CALL SCREEN 100.
@@ -35,7 +33,7 @@ MODULE user_command_0100 INPUT.
       IF gv_name IS INITIAL.
         MESSAGE 'Enter a name' TYPE 'S' DISPLAY LIKE 'E'.
       ELSE.
-        MESSAGE |Saved { gv_name }, { gv_city }, { gv_birth_date DATE = USER }, quantity { gv_quantity }| TYPE 'S'.
+        MESSAGE |Saved { gv_name }, { gv_city }, quantity { gv_quantity }| TYPE 'S'.
       ENDIF.
   ENDCASE.
 ENDMODULE.
